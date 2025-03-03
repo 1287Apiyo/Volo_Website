@@ -29,9 +29,7 @@ const Hero = () => {
       >
         <h1 className="text-5xl font-bold">Volo - The Future of Mobility</h1>
         <p className="mt-4 text-lg">Seamless Rides. Unmatched Convenience.</p>
-        <button className="mt-6 px-6 py-2 bg-white text-black rounded-lg">
-          Get Started
-        </button>
+       
       </motion.div>
     </section>
   );
