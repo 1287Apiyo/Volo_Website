@@ -23,7 +23,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section
+    <section id="services"
       className="w-full text-white py-24 px-6 relative overflow-hidden"
       style={{
         backgroundImage: "url('/assets/background.jpeg')", // Replace with your actual background image

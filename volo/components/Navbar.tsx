@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,6 +13,17 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Smooth Scroll Function
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 80, // Adjust for navbar height
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 p-4 transition-all ${
@@ -21,13 +31,19 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link href="/" className="text-white text-2xl font-bold uppercase">
+        <a href="/" className="text-white text-2xl font-bold uppercase">
           VOLO
-        </Link>
+        </a>
         <div className="hidden md:flex gap-6">
-          <Link href="#about" className="text-white hover:underline">About</Link>
-          <Link href="#services" className="text-white hover:underline">Services</Link>
-          <Link href="#contact" className="text-white hover:underline">Contact</Link>
+          <button onClick={() => scrollToSection("about")} className="text-white hover:underline">
+            About
+          </button>
+          <button onClick={() => scrollToSection("services")} className="text-white hover:underline">
+            Services
+          </button>
+          <button onClick={() => scrollToSection("contact")} className="text-white hover:underline">
+            Contact
+          </button>
         </div>
       </div>
     </nav>
