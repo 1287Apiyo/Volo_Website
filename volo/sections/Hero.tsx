@@ -8,7 +8,7 @@ const Hero = () => {
     <section className="relative w-screen h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/assets/city.jpeg" // Ensure this image exists in /public/assets/
+        src="/assets/Nairobi.jpeg" // Ensure this image exists in /public/assets/
         alt="City Background"
         layout="fill"
         objectFit="cover"
