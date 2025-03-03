@@ -31,7 +31,7 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <a href="/" className="text-white text-2xl font-bold uppercase">
+        <a href="/" className="text-yellow-500 text-2xl font-bold uppercase">
           VOLO
         </a>
         <div className="hidden md:flex gap-6">
