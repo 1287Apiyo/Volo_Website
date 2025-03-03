@@ -5,38 +5,38 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section id="about" className="w-full bg-black text-white py-20 px-8">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <section className="w-full bg-black text-white py-32 px-12 relative min-h-[800px]">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12">
         {/* Text Content */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="flex-1 text-center md:text-left"
+          className="max-w-lg md:w-1/2"
         >
-          <h2 className="text-4xl font-bold mb-6">About Volo</h2>
-          <p className="text-gray-400 leading-relaxed">
+          <h2 className="text-5xl font-bold mb-6">About Volo</h2>
+          <p className="text-gray-200 leading-relaxed text-xl">
             Volo is redefining urban mobility with fast, safe, and affordable rides. 
             Whether you're commuting to work or heading out for an adventure, 
             we ensure a seamless experience with professional drivers and innovative technology.
           </p>
         </motion.div>
 
-        {/* Image */}
+        {/* Floating Image */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex-1"
+          className="md:w-1/2 relative"
         >
           <Image
-            src="/assets/vollo.png" // Replace with actual image
+            src="/assets/about.png" // Replace with actual image
             alt="About Volo"
-            width={500}
-            height={300}
-            className="rounded-lg shadow-lg"
+            width={600}
+            height={400}
+            className="rounded-lg shadow-2xl object-cover transform hover:scale-105 transition-transform duration-300"
           />
         </motion.div>
       </div>

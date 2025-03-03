@@ -23,7 +23,8 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="services"
+    <section
+      id="services"
       className="w-full text-white py-24 px-6 relative overflow-hidden"
       style={{
         backgroundImage: "url('/assets/background.jpeg')", // Replace with your actual background image
@@ -50,8 +51,8 @@ const Features = () => {
             <div className="w-full md:w-[60%] flex relative">
               <div
                 className={`w-[750px] h-[450px] relative ${
-                  index === 1 ? "ml-auto -mr-64 max-w-none" : "mr-auto -ml-64 max-w-none"
-                }`} // More push! 🚀
+                  index === 0 || index === 2 ? "mr-auto -ml-52 max-w-none" : ""
+                }`} // Adjusted push for first and last images
               >
                 <Image
                   src={feature.image}
@@ -65,8 +66,8 @@ const Features = () => {
 
             {/* Text Section */}
             <div className="w-full md:w-1/2 text-center md:text-left px-4 relative">
-              <h3 className="text-4xl font-bold mb-5">{feature.title}</h3>
-              <p className="text-black-400 text-lg leading-relaxed">
+              <h3 className="text-4xl font-bold mb-5 text-white">{feature.title}</h3>
+              <p className="text-white text-lg leading-relaxed">
                 {feature.description}
               </p>
             </div>
