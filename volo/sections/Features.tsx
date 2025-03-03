@@ -33,7 +33,7 @@ const Features = () => {
       }}
     >
       {/* Blurry Overlay */}
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-lg"></div>
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-lg"></div>
 
       <div className="relative max-w-6xl mx-auto space-y-24">
         {features.map((feature, index) => (
