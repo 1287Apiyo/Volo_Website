@@ -9,14 +9,16 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
 
-      {/* Call to Book Section (or Get the App) */}
-      <CallToBook />
+      
 
       {/* About Us Section */}
       <About />
 
       {/* Features Section */}
       <Features />
+      
+      {/* Call to Book Section (or Get the App) */}
+      <CallToBook />
     </div>
   );
 }
