@@ -27,13 +27,13 @@ const Features = () => {
       id="services"
       className="w-full text-white py-24 px-6 relative overflow-hidden"
       style={{
-        backgroundImage: "url('/assets/background.jpeg')", // Replace with your actual background image
+        backgroundImage: "url('/assets/background.jpeg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       {/* Blurry Overlay */}
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-lg"></div>
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-lg"></div>
 
       <div className="relative max-w-6xl mx-auto space-y-24">
         {features.map((feature, index) => (
@@ -44,15 +44,21 @@ const Features = () => {
             }`}
             initial={{ opacity: 0, x: index % 2 === 0 ? -80 : 80 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
+            viewport={{ once: false, amount: 0.3 }} // Animation triggers every time section is visible
           >
             {/* Image Section */}
-            <div className="w-full md:w-[60%] flex relative">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: index * 0.3 }}
+              viewport={{ once: false, amount: 0.3 }} // Repeats animation on scroll
+              className="w-full md:w-[60%] flex relative"
+            >
               <div
-                className={`w-[750px] h-[450px] relative ${
+                className={`w-[750px] h-[450px] relative overflow-hidden ${
                   index === 0 || index === 2 ? "mr-auto -ml-52 max-w-none" : ""
-                }`} // Adjusted push for first and last images
+                }`}
               >
                 <Image
                   src={feature.image}
@@ -62,15 +68,19 @@ const Features = () => {
                   className="rounded-xl shadow-xl"
                 />
               </div>
-            </div>
+            </motion.div>
 
             {/* Text Section */}
-            <div className="w-full md:w-1/2 text-center md:text-left px-4 relative">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.4 }}
+              viewport={{ once: false, amount: 0.3 }} // Repeats animation on scroll
+              className="w-full md:w-1/2 text-center md:text-left px-4 relative"
+            >
               <h3 className="text-4xl font-bold mb-5 text-white">{feature.title}</h3>
-              <p className="text-white text-lg leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
+              <p className="text-white text-lg leading-relaxed">{feature.description}</p>
+            </motion.div>
           </motion.div>
         ))}
       </div>

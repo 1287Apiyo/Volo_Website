@@ -35,13 +35,22 @@ const Navbar = () => {
           VOLO
         </a>
         <div className="hidden md:flex gap-6">
-          <button onClick={() => scrollToSection("about")} className="text-white hover:underline">
+          <button
+            onClick={() => scrollToSection("about")}
+            className="text-white transition-colors duration-300 hover:text-[#FFC107]"
+          >
             About
           </button>
-          <button onClick={() => scrollToSection("services")} className="text-white hover:underline">
+          <button
+            onClick={() => scrollToSection("services")}
+            className="text-white transition-colors duration-300 hover:text-[#FFC107]"
+          >
             Services
           </button>
-          <button onClick={() => scrollToSection("contact")} className="text-white hover:underline">
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="text-white transition-colors duration-300 hover:text-[#FFC107]"
+          >
             Contact
           </button>
         </div>
