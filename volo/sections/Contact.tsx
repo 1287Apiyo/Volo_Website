@@ -31,13 +31,13 @@ const Contact = () => {
           </p>
           <div className="space-y-4 text-gray-200">
             <p className="text-lg">
-              📍 <span className="font-semibold">Nairobi, Kenya</span>
+               <span className="font-semibold">Nairobi, Kenya</span>
             </p>
             <p className="text-lg">
-              ✉️ <span className="font-semibold">support@volo.com</span>
+               <span className="font-semibold">support@volo.com</span>
             </p>
             <p className="text-lg">
-              📞 <span className="font-semibold">+254 712 345 678</span>
+               <span className="font-semibold">+254 712 345 678</span>
             </p>
           </div>
           <div className="mt-6">
