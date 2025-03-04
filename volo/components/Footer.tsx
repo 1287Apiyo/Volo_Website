@@ -74,6 +74,11 @@ const Footer = () => {
                 Privacy Policy
               </button>
             </li>
+            <li>
+              <Link href="/FAQS" className="hover:text-yellow-400 transition">
+                FAQs
+              </Link>
+            </li>
           </ul>
         </motion.div>
 
