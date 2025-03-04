@@ -45,7 +45,7 @@ const Navbar = () => {
             onClick={() => scrollToSection("services")}
             className="text-white transition-colors duration-300 hover:text-[#FFC107]"
           >
-            Services
+          Services
           </button>
           <button
             onClick={() => scrollToSection("contact")}
