@@ -28,7 +28,7 @@ const Hero = () => {
         transition={{ duration: 1 }}
       >
         <h1 className="text-5xl font-bold">VOLO</h1>
-        <p className="mt-4 text-lg">Own the Journey;own the ride!</p>
+        <p className="mt-4 text-lg">Own the Journey,Own the Ride!</p>
        
       </motion.div>
     </section>

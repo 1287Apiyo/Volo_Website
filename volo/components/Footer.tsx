@@ -87,8 +87,8 @@ const Footer = () => {
         >
           <h3 className="text-lg font-semibold text-yellow-500">Contact Us</h3>
           <p className="text-gray-400"> Nairobi, Kenya</p>
-          <p className="text-gray-400"> support@volo.com</p>
-          <p className="text-gray-400">+254 712 345 678</p>
+          <p className="text-gray-400"> info@volo.africa</p>
+          <p className="text-gray-400">+254 713 637 551</p>
 
           {/* Social Icons */}
           <div className="flex space-x-4 text-gray-400 text-xl">
