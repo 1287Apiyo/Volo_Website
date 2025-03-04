@@ -34,7 +34,7 @@ const Contact = () => {
                <span className="font-semibold">Nairobi, Kenya</span>
             </p>
             <p className="text-lg">
-               <span className="font-semibold">info@volo.africa</span>
+               <span className="font-semibold">Info@volo.africa</span>
             </p>
             <p className="text-lg">
                <span className="font-semibold">+254 713 637 551</span>
