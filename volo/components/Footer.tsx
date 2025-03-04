@@ -1,17 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
-  // Smooth Scroll Function
+  const pathname = usePathname(); // Get current page
+
+  // Smooth Scroll Function (Only if on the /terms page)
   const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      window.scrollTo({
-        top: section.offsetTop - 80, // Adjust for navbar height
-        behavior: "smooth",
-      });
+    if (pathname !== "/terms") {
+      // If not on the Terms page, navigate there first
+      window.location.href = `/terms#${id}`;
+    } else {
+      const section = document.getElementById(id);
+      if (section) {
+        window.scrollTo({
+          top: section.offsetTop - 80, // Adjust for navbar height
+          behavior: "smooth",
+        });
+      }
     }
   };
 
@@ -43,28 +52,19 @@ const Footer = () => {
           <h3 className="text-lg font-semibold text-yellow-500">Quick Links</h3>
           <ul className="text-gray-400 space-y-2">
             <li>
-              <button
-                onClick={() => scrollToSection("about")}
-                className="hover:text-yellow-400 transition"
-              >
+              <Link href="/#about" className="hover:text-yellow-400 transition">
                 About Us
-              </button>
+              </Link>
             </li>
             <li>
-              <button
-                onClick={() => scrollToSection("services")}
-                className="hover:text-yellow-400 transition"
-              >
+              <Link href="/#services" className="hover:text-yellow-400 transition">
                 Our Services
-              </button>
+              </Link>
             </li>
             <li>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="hover:text-yellow-400 transition"
-              >
+              <Link href="/#contact" className="hover:text-yellow-400 transition">
                 Contact Us
-              </button>
+              </Link>
             </li>
             <li>
               <button
