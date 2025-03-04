@@ -41,8 +41,8 @@ const Contact = () => {
             </p>
           </div>
           <div className="mt-6">
-            <a href="#" className="text-yellow-400 underline">Terms & Conditions</a> &nbsp; | &nbsp;
-            <a href="#" className="text-yellow-400 underline">Privacy Policy</a>
+            <a href="/terms#terms"className="text-yellow-400 underline">Terms & Conditions</a> &nbsp; | &nbsp;
+            <a href="/terms#privacy"  className="text-yellow-400 underline">Privacy Policy</a>
           </div>
         </motion.div>
 
