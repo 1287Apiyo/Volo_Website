@@ -27,8 +27,8 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-5xl font-bold">Volo - The Future of Mobility</h1>
-        <p className="mt-4 text-lg">Seamless Rides. Unmatched Convenience.</p>
+        <h1 className="text-5xl font-bold">VOLO</h1>
+        <p className="mt-4 text-lg">Own the Journey;own the ride!</p>
        
       </motion.div>
     </section>

@@ -41,9 +41,10 @@ const About = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold">About Volo</h2>
           <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-            Volo is redefining urban mobility with fast, safe, and affordable rides.
-            Whether you're commuting to work or heading out for an adventure,
-            we ensure a seamless experience with professional drivers and innovative technology.
+          Volo is a revolutionary taxi-hailing app built by enterprising Kenyans to redefine the future of ride-sharing. Inspired by the rising cost of living and rapid technological advancements in Kenya, we developed a platform that ensures sustainable solutions for drivers and safer, more rewarding rides for passengers.
+
+By prioritizing fairness, innovation, and shared success, VOLO is more than just a ride—it’s a movement toward a better future for both drivers and passengers.
+
           </p>
         </motion.div>
 
