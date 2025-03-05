@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const faqs = [
   { question: "What is VOLO?", answer: "VOLO is a taxi-hailing app that connects passengers with drivers for safe, reliable, and affordable transportation in Kenya." },
@@ -33,36 +34,53 @@ const FAQPage = () => {
 
   return (
     <div className="min-h-screen bg-black text-white pt-32 py-10 px-6">
-  <div className="max-w-4xl mx-auto p-10">
-    <h1 className="text-4xl font-bold text-yellow-500 mb-2 text-center border-b border-white-500 pb-4">
-      FREQUENTLY ASKED QUESTIONS
-    </h1>
-  </div>
-  <div className="max-w-4xl mx-auto mt-6">
-    <div className="space-y-4">
-      {faqs.map((faq, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          className="bg-white p-5 rounded-lg shadow-md"
-        >
-          <button
-            className="w-full text-left font-semibold text-lg flex justify-between text-black -400"
-            onClick={() => toggleFAQ(index)}
-          >
-            {faq.question}
-            <span>{openIndex === index ? "−" : "+"}</span>
-          </button>
-          {openIndex === index && <p className="mt-2 text-black -300">{faq.answer}</p>}
-        </motion.div>
-      ))}
-    </div>
-  </div>
-  <div className="max-w-7xl mx-auto mt-10 border-t border-gray-500 pt-6"></div>
-</div>
+      {/* Hero Section with Background Image */}
+      <div className="relative w-full h-[400px] flex items-center justify-center">
+      <Image
+        src="/assets/Nairobi.jpeg" // Ensure this image exists in /public/assets/
+        alt="City Background"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+        priority
+        className="w-full h-full object-cover"
+      />
+        <div className="absolute text-center">
+          <h1 className="text-5xl font-bold text-white-500">Got Questions?</h1>
+          <p className="text-white-300 mt-4 text-lg">We've got answers! Find everything you need to know about VOLO below.</p>
+        </div>
+      </div>
+      
+      {/* Quick Access Buttons */}
+      <div className="flex justify-center gap-4 mt-10">
+        <button className="px-6 py-3 bg-yellow-500 text-black font-bold rounded-lg shadow-md hover:bg-yellow-600">Contact Support</button>
+        <button className="px-6 py-3 bg-gray-700 text-white font-bold rounded-lg shadow-md hover:bg-gray-600">Live Chat</button>
+      </div>
 
+      {/* FAQ Section */}
+      <div className="max-w-4xl mx-auto mt-16">
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-gray-800 p-5 rounded-lg shadow-md"
+            >
+              <button
+                className="w-full text-left font-semibold text-lg flex justify-between text-yellow-400"
+                onClick={() => toggleFAQ(index)}
+              >
+                {faq.question}
+                <span>{openIndex === index ? "−" : "+"}</span>
+              </button>
+              {openIndex === index && <p className="mt-2 text-gray-300">{faq.answer}</p>}
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 
