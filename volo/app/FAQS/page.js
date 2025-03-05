@@ -33,54 +33,71 @@ const FAQPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white pt-32 py-10 px-6">
-      {/* Hero Section with Background Image */}
-      <div className="relative w-full h-[400px] flex items-center justify-center">
-      <Image
-        src="/assets/Nairobi.jpeg" // Ensure this image exists in /public/assets/
-        alt="City Background"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-        priority
-        className="w-full h-full object-cover"
-      />
-        <div className="absolute text-center">
-          <h1 className="text-5xl font-bold text-white-500">Got Questions?</h1>
-          <p className="text-white-300 mt-4 text-lg">We've got answers! Find everything you need to know about VOLO below.</p>
-        </div>
-      </div>
-      
-      {/* Quick Access Buttons */}
-      <div className="flex justify-center gap-4 mt-10">
-        <button className="px-6 py-3 bg-yellow-500 text-black font-bold rounded-lg shadow-md hover:bg-yellow-600">Contact Support</button>
-        <button className="px-6 py-3 bg-gray-700 text-white font-bold rounded-lg shadow-md hover:bg-gray-600">Live Chat</button>
-      </div>
-
-      {/* FAQ Section */}
-      <div className="max-w-4xl mx-auto mt-16">
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className="bg-gray-800 p-5 rounded-lg shadow-md"
-            >
-              <button
-                className="w-full text-left font-semibold text-lg flex justify-between text-yellow-400"
-                onClick={() => toggleFAQ(index)}
-              >
-                {faq.question}
-                <span>{openIndex === index ? "−" : "+"}</span>
-              </button>
-              {openIndex === index && <p className="mt-2 text-gray-300">{faq.answer}</p>}
-            </motion.div>
-          ))}
-        </div>
-      </div>
+<div className="min-h-screen bg-black text-white pt-32 py-10 px-6">
+  {/* Hero Section with Background Image */}
+  <div className="relative w-full h-[400px] flex items-center justify-center">
+    <Image
+      src="/assets/Nairobi.jpeg"
+      alt="City Background"
+      layout="fill"
+      objectFit="cover"
+      quality={100}
+      priority
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute text-center">
+      <h1 className="text-5xl font-bold text-white-500">Got Questions?</h1>
+      <p className="text-white-300 mt-4 text-lg">We've got answers! Find everything you need to know about VOLO below.</p>
     </div>
+  </div>
+
+  {/* Quick Info Cards */}
+  <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+    <div className="bg-gray-800 p-8 rounded-lg shadow-md text-center">
+      <h3 className="text-yellow-400 font-semibold text-2xl">24/7 Availability</h3>
+      <p className="text-gray-300 mt-3 text-base">VOLO is here for you anytime, anywhere.</p>
+    </div>
+    <div className="bg-gray-800 p-8 rounded-lg shadow-md text-center">
+      <h3 className="text-yellow-400 font-semibold text-2xl">Safe & Secure</h3>
+      <p className="text-gray-300 mt-3 text-base">All rides are tracked, and drivers are verified.</p>
+    </div>
+    <div className="bg-gray-800 p-8 rounded-lg shadow-md text-center">
+      <h3 className="text-yellow-400 font-semibold text-2xl">Multiple Payment Options</h3>
+      <p className="text-gray-300 mt-3 text-base">Choose M-Pesa, card, or cash at your convenience.</p>
+    </div>
+  </div>
+
+  {/* FAQ Title */}
+  <div className="text-center mt-20">
+    <h2 className="text-4xl font-bold text-yellow-400">Frequently Asked Questions</h2>
+    <p className="text-gray-300 mt-4 text-lg">Find answers to common questions about VOLO.</p>
+  </div>
+
+  {/* FAQ Section */}
+  <div className="max-w-4xl mx-auto mt-10">
+    <div className="space-y-6">
+      {faqs.map((faq, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="bg-gray-800 p-6 rounded-lg shadow-md"
+        >
+          <button
+            className="w-full text-left font-semibold text-lg flex justify-between text-yellow-400"
+            onClick={() => toggleFAQ(index)}
+          >
+            {faq.question}
+            <span>{openIndex === index ? "−" : "+"}</span>
+          </button>
+          {openIndex === index && <p className="mt-2 text-gray-300">{faq.answer}</p>}
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</div>
+
   );
 };
 
