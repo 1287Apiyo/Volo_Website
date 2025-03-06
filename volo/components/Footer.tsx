@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaX } from "react-icons/fa6";
 
 const Footer = () => {
   const pathname = usePathname(); // Get current page
@@ -97,16 +98,16 @@ const Footer = () => {
 
           {/* Social Icons */}
           <div className="flex space-x-4 text-gray-400 text-xl">
-            <a href="#" className="hover:text-yellow-400 transition">
+            <a href="https://www.facebook.com/profile.php?id=61573844342475" className="hover:text-yellow-400 transition">
               <FaFacebook />
             </a>
             <a href="#" className="hover:text-yellow-400 transition">
-              <FaTwitter />
+              <FaX />
             </a>
             <a href="#" className="hover:text-yellow-400 transition">
               <FaInstagram />
             </a>
-            <a href="#" className="hover:text-yellow-400 transition">
+            <a href="https://www.linkedin.com/company/volo-africa/" className="hover:text-yellow-400 transition">
               <FaLinkedin />
             </a>
           </div>
