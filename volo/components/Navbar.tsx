@@ -62,12 +62,7 @@ const Navbar = () => {
           >
             Contact
           </button>
-          <Link
-            href="/terms"
-            className="text-white transition-colors duration-300 hover:text-[#FFC107]"
-          >
-            Terms & Privacy
-          </Link>
+        
         </div>
       </div>
     </nav>
