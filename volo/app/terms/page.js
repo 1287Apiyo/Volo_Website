@@ -223,31 +223,31 @@ const TermsAndPrivacy = () => {
       content:
         "VOLO reserves the right to update these Terms and Conditions at any time. Continued use of the platform after changes are made constitutes acceptance of the updated terms.",
     },
-  ].map((section, index) => (
-    <div key={index} className="mt-6 text-gray-400">
-      <h3 className="text-xl font-semibold">{section.title}</h3>
-      {section.content && (
-        <p className="text-lg leading-relaxed mt-2">{section.content}</p>
-      )}
-      {section.list && (
-        <ul className="text-lg list-disc pl-6 mt-2">
-          {section.list.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-      )}
-    </div>
-  ))}
-</div>
+        ].map((section, index) => (
+          <div key={index} className="mt-6 text-gray-400">
+            <h3 className="text-xl font-semibold">{section.title}</h3>
+            {section.content && (
+              <p className="text-lg leading-relaxed mt-2">{section.content}</p>
+            )}
+            {section.list && (
+              <ul className="text-lg list-disc pl-6 mt-2">
+                {section.list.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+        </div>
 
-        <hr className="border-gray-700 my-8" />
+              <hr className="border-gray-700 my-8" />
 
-        <p className="text-center text-gray-500 text-base">
-          If you have any questions, please contact us at{" "}
-          <Link href="@/sections/Contact" className="text-yellow-400 underline">
-            VOLO Support
-          </Link>.
-        </p>
+              <p className="text-center text-gray-500 text-base">
+                If you have any questions, please contact us at{" "}
+                <Link href="@/sections/Contact" className="text-yellow-400 underline">
+                  VOLO Support
+                </Link>.
+              </p>
       </div>
     </section>
   );

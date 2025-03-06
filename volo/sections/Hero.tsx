@@ -10,8 +10,8 @@ const Hero = () => {
       <Image
         src="/assets/Nairobi.jpeg" // Ensure this image exists in /public/assets/
         alt="City Background"
-        layout="fill"
-        objectFit="cover"
+        fill
+        style={{ objectFit: 'cover' }}
         quality={100}
         priority
         className="w-full h-full object-cover"

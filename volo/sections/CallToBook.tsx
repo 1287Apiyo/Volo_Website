@@ -59,8 +59,8 @@ const CallToBook = () => {
         >
           <h2 className="text-4xl font-bold text-yellow-400">The VOLO Difference!</h2>
           <p className="text-gray-300 text-lg">
-            VOLO rewards its users through a point-based system, offering free rides and promotions.
-            Drivers also earn based on their performance and user ratings, contributing to their share in the company’s profits.
+            VOLO drivers are partners, not employees. They own a share of the company and are treated with respect and dignity. Drivers also earn based on their performance 
+            and user ratings, contributing to their share in the company’s profits.
           </p>
 
           <p className="text-gray-300 text-lg">

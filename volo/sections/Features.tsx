@@ -22,12 +22,12 @@ const features = [
       "Your safety is our priority. With an inbuilt SOS feature that shares your location with emergency teams, we ensure help is always within reach.",
     image: "/assets/safety-image.jpeg",
   },
-  {
-    title: "Innovation at its Core",
-    description:
-      "Built by a team led by an MIT-trained principal engineer and futuristic coders, Volo is designed to redefine urban mobility in Kenya.",
-    image: "/assets/background.jpeg",
-  },
+  // {
+  //   title: "Innovation at its Core",
+  //   description:
+  //     "Built by a team led by an MIT-trained principal engineer and futuristic coders, Volo is designed to redefine urban mobility in Kenya.",
+  //   image: "/assets/background.jpeg",
+  // },
 ];
 
 const Features = () => {
