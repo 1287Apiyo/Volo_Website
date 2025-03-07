@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import "../styles/Services.css";
 
 const services = [
   { title: "Rides", description: "Request in seconds, ride in minutes." },
