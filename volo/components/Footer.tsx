@@ -38,7 +38,7 @@ const Footer = () => {
         >
           <h2 className="text-3xl font-bold text-yellow-500">VOLO</h2>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Your trusted partner in seamless and reliable urban mobility.
+            Own the journey, own the ride.
           </p>
         </motion.div>
 

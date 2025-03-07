@@ -23,7 +23,7 @@ const CallToBook = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             {[
               ["Download the VOLO app from Google Play.", "Create your user account.", "Agree to the terms and conditions.", "Verify your phone number via OTP."],
-              ["Request, complete, and pay for your ride.", "Earn points to redeem for free trips.", "Rate your experience and share feedback.", "Schedule your next ride hassle-free."]
+              ["Request, complete, and pay for your ride.", "Rate your experience and share feedback.", "Schedule your next ride hassle-free.", "Follow us on social media pages."]
             ].map((column, colIndex) => (
               <div key={colIndex} className="space-y-4">
                 {column.map((step, index) => (

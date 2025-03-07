@@ -44,6 +44,7 @@ const Navbar = () => {
         </Link>
         <div className="hidden md:flex gap-6">
           {/* Detect if on home page, then use smooth scroll; otherwise, navigate */}
+
           <button
             onClick={() => scrollToSection("about")}
             className="text-white transition-colors duration-300 hover:text-[#FFC107]"
@@ -57,17 +58,18 @@ const Navbar = () => {
             Services
           </button>
           <button
+            onClick={() => scrollToSection("features")}
+            className="text-white transition-colors duration-300 hover:text-[#FFC107]"
+          >
+            Features
+          </button>
+          <button
             onClick={() => scrollToSection("contact")}
             className="text-white transition-colors duration-300 hover:text-[#FFC107]"
           >
             Contact
-          </button>
-          <Link
-            href="/terms"
-            className="text-white transition-colors duration-300 hover:text-[#FFC107]"
-          >
-            Terms & Privacy
-          </Link>
+          </button>      
+
         </div>
       </div>
     </nav>
