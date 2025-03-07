@@ -68,13 +68,8 @@ const Navbar = () => {
             className="text-white transition-colors duration-300 hover:text-[#FFC107]"
           >
             Contact
-<<<<<<< HEAD
           </button>      
 
-=======
-          </button>
-        
->>>>>>> e84daaf6865c4411b23661a6d94fb7416cecfe5b
         </div>
       </div>
     </nav>
