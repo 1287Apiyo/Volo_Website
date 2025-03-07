@@ -72,8 +72,13 @@ const Footer = () => {
                 onClick={() => scrollToSection("privacy")}
                 className="hover:text-yellow-400 transition"
               >
-                Privacy Policy
+               Terms And Conditions
               </button>
+            </li>
+            <li>
+            <Link href="/privacy" className="hover:text-yellow-400 transition">
+               Privacy Policy
+              </Link>
             </li>
             <li>
               <Link href="/FAQS" className="hover:text-yellow-400 transition">
