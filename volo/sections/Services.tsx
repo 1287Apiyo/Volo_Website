@@ -30,7 +30,7 @@ const Services = () => {
           <motion.div
             key={index}
             className="service-card bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-yellow-500/30 transition-all"
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.9 }} 
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
             viewport={{ once: true }}
